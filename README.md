@@ -6,7 +6,9 @@ The project is a React front end delivered within the [Storybook](https://storyb
 
 The standalone UI can be viewed remotely at (https://pensive-euler-25c7bf.netlify.com/iframe.html?id=pages--default)
 
-The Storybook interface, showing all the individual components is available [HERE](https://pensive-euler-25c7bf.netlify.com/?path=/story/assignworkers--default). The full UI is the "Pages -> default" option with other options showing implementations of various components.
+The Storybook interface, showing all the individual components is available [HERE](https://pensive-euler-25c7bf.netlify.com/?path=/story/assignworkers--default). The full UI is the "Pages -> default" option with other options showing implementations of various components. 
+
+**Please note:** at the time of writing - 11:40pm on Sunday night - some of these components are missing configuration options as detailed in item 2 of "How would I make it better" below - I may have changed this by the time you see it :-)
 
 ## Installation
 
