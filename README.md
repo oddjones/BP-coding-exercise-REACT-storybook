@@ -51,8 +51,11 @@ The standalone interface can be toggled by clicking the "open canvas in new tab"
 
 * the project presents two errors at WCAG2.0 AA to the [SQUIZ Labs HTML_codesniffer](https://squizlabs.github.io/HTML_CodeSniffer/) accessibility widget: 
 
-1.`The html element should have a lang or xml:lang attribute which describes the language of the document.` This is because te page is presented by Storybook - I will need to investigate further how to edit this
+1. `The html element should have a lang or xml:lang attribute which describes the language of the document.` This is because te page is presented by Storybook - I will need to investigate further how to edit this.
+
 2. `This form does not contain a submit button, which creates issues for those who cannot submit the form using the keyboard. Submit buttons are INPUT elements with type attribute "submit" or "image", or BUTTON elements with type "submit" or omitted/invalid.` - This is the search form, which has been presented without a submit button in the designs - an alternative can be provided but this would need signoff.
+
+* "Paused" processes still complete - a limitation of the "spoofing" for progress (see "start a process" above).
 
 
 ## How would I make it better?
