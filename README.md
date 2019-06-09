@@ -1,68 +1,68 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Blue Prism coding exercise (react storybook)
 
-## Available Scripts
+This project forms the second part of my submission to the Blue Prism Tech Test. 
 
-In the project directory, you can run:
+The project is a React front end delivered within the [Storybook](https://storybook.js.org/) framework. Storybook allows for the development, testing and documentation of React components in a sandbox environment, where their individual properties can be tested outside of a production (or development) environment.
 
-### `npm start`
+The standalone UI can be viewed remotely at (https://pensive-euler-25c7bf.netlify.com/iframe.html?id=pages--default)
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The Storybook interface, showing all the individual components is available [HERE](https://pensive-euler-25c7bf.netlify.com/?path=/story/assignworkers--default). The full UI is the "Pages -> default" option with other options showing implementations of various components.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+## Installation
 
-### `npm test`
+If you wish to install the project for yourself locally, clone the repo and run `yarn` to install the dependencies.
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Run storybook by typing `yarn storybook`
 
-### `npm run build`
+The standalone interface can be toggled by clicking the "open canvas in new tab" link (second to right in the top right corner of the interface, signified by an icon of an arrow rising vertically out of a rectangle).
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**NOTE** I haven't tested the install with the npm package manager, but I have had some difficulties with it personally, so I have stuck with yarn - if you have difficulty installing, use the web version above - it is identical
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+## Features
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Add remove Workers
+* click the (-) and (+) buttons either side of the "workers assigned" figure to increas/decrease the number of workers assigned to a task
+* It is assumed that a process with no workers assigned is set to "Unassigned"
+* an Unassigned process (with no workers) cannot be started
+* adding a worker to an unassigned process sets it to "Assigned"
 
-### `npm run eject`
+### Set priority
+* click the star rating widget to change the process's priority (one star = low, 2 = medium, 3 = high)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### view advanced progress information
+* clicking the "eye" icon drops down a panel beneath the Progress bar, showing more information about the process
+* A process with 0 progress shows a greyed out icon - this is more to show conditional rendering than anythinng else - "running" the process changes the icon's colour - this probably wouldn't make it to production as it's not very intuitive.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Auto Assign
+* hovering (or clicking on mobile) on the gear status icon pops up a settings menu.
+* the only setting which is wired up is "Auto assign" as detailed in the sketch file - clicking this will show a "set priority" widget.
+* choosing low/medium/high sets the priority in the process and assigns an appropriate number of workers to the project.
+* if a process is unassigned when "auto assign" is performed, it will be set to "Assigned"
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### "start" a process
+* Clicking the "play" button will start a process
+* The running process has been spoofed in this mockup by using a 5 second timeout, after which the process will be shown to complete
+* a complete process cannot be restarted unless it is re-assigned
+* a limitation of the "spoofing" is that if a process is "paused" it will still show as completed - this is acknowledged as a limitation of the mockup.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Accepted Issues
 
-## Learn More
+* the project presents two errors at WCAG2.0 AA to the [SQUIZ Labs HTML_codesniffer](https://squizlabs.github.io/HTML_CodeSniffer/) accessibility widget: 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1.`The html element should have a lang or xml:lang attribute which describes the language of the document.` This is because te page is presented by Storybook - I will need to investigate further how to edit this
+2. `This form does not contain a submit button, which creates issues for those who cannot submit the form using the keyboard. Submit buttons are INPUT elements with type attribute "submit" or "image", or BUTTON elements with type "submit" or omitted/invalid.` - This is the search form, which has been presented without a submit button in the designs - an alternative can be provided but this would need signoff.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+## How would I make it better?
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+1. Learn more React! - this is my first serious React project - it has been a learning experience - there's plenty I'd do differently, given the chance to spend more time with the code.
+2. Configure the storybook stories more effectively - a few components are missing key dependencies (mainly due to my hoisting the code from them up to the main "process" component) - I will be rewriting the stories so as to make them work independently again.
+3. Install and configure more add-ins to Storybook - a built in responsive viewer, code lifting and documentation as well as the infamous "knobs" addon which allows you to play with all the settings of a component in its standalone state.
+4. sort the processes by priority - or maybe offer a "drag and drop" facility to change priority by moving processes up and down the list
+5. Testing - Storybook implements the Jest testing framework by default - and addins can be implemented to set rendered results within the Storybook UI as "snapshot" tests for automation testing purposes.
+6. Build it into an app - this didn't seem to be a requirement of the tech-test and certainly wasn't possible in the allotted timeframe
 
-### Analyzing the Bundle Size
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
 
-### Making a Progressive Web App
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
 
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
