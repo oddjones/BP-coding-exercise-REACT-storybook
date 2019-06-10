@@ -69,7 +69,7 @@ The standalone interface can be toggled by clicking the "open canvas in new tab"
 3. Install and configure more add-ins to Storybook - a built in responsive viewer, code lifting and documentation as well as the infamous "knobs" addon which allows you to play with all the settings of a component in its standalone state.
 4. sort the processes by priority - or maybe offer a "drag and drop" facility to change priority by moving processes up and down the list
 5. Testing - Storybook implements the Jest testing framework by default - and addins can be implemented to set rendered results within the Storybook UI as "snapshot" tests for automation testing purposes.
-6. Build it into an app - this didn't seem to be a requirement of the tech-test and certainly wasn't possible in the allotted timeframe
+6. Build it into an app - this didn't seem to be a requirement of the tech-test and certainly wasn't possible (for me) in the allotted timeframe
 
 
 
