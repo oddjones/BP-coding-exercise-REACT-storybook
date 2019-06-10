@@ -67,7 +67,8 @@ The standalone interface can be toggled by clicking the "open canvas in new tab"
     * Some elements are rendered directly into the virtual DOM rather than being shown/hidden (the progress details for example) - this would cause havoc for assistive tech. I'd fix that.
     * Below 375px screen width render for older phones - I'd add another media query and do some fixing.
 3. Install and configure more add-ins to Storybook - a built in responsive viewer, code lifting and documentation as well as the infamous "knobs" addon which allows you to play with all the settings of a component in its standalone state.
-4. sort the processes by priority - or maybe offer a "drag and drop" facility to change priority by moving processes up and down the list
+4. Sort the processes by priority - or maybe offer a "drag and drop" facility to change priority by moving processes up and down the list
+4. Rethink the popup menu - I used a spectre.css tool to render this, which makes use of CSS transforms only, meaning I had no hook to attach a click or close event to - so I had to rely on a 4 second setTimeout to change the rating widget back to the list - this works in the most part but can give unpredictable results on mobile and if the user re-opens the list or stays overlong on the rating panel.
 4. Fix the linting warnings - there are some basic Javascript things (`Expected '!==' and instead saw '!='`, unused variables, duplicate props) that need hoovering up.
 5. Testing - Storybook implements the Jest testing framework by default - and addins can be implemented to set rendered results within the Storybook UI as "snapshot" tests for automation testing purposes.
 5. More testing - I've only dealt with the real accessibility howlers in this pass - I'd test with more tools, look at the "warnings" and do a fine-toothed comb cleanup of stuff that automated testing can't pick up, like tab-index, focus states etc.
