@@ -76,6 +76,22 @@ The standalone interface can be toggled by clicking the "open canvas in new tab"
 5. More testing - I've only dealt with the real accessibility howlers in this pass - I'd test with more tools, look at the "warnings" and do a fine-toothed comb cleanup of stuff that automated testing can't pick up, like tab-index, focus states etc.
 6. Build it into an app - this didn't seem to be a requirement of the tech-test and certainly wasn't possible (for me) in the allotted timeframe
 
+## Tools used
+
+1. Storybook : [https://storybook.js.org/]
+2. Codekit : [https://codekitapp.com/]
+3. SVGOMG : [https://jakearchibald.github.io/svgomg/]
+4. Corporate BS Generator : [https://www.atrixnet.com/bs-generator.html]
+5. Spectre.css : [https://picturepan2.github.io/spectre/]
+6. Netlify : [https://www.netlify.com/]
+
+
+## References
+
+1. Accessible inline SVG icons : [https://css-tricks.com/accessible-svg-icons-with-inline-sprites/]
+2. BEM : [http://getbem.com/]
+3. unique IDs for accessible inline SVG : [https://css-tricks.com/youre-inlining-svg-icons-deal-unique-titles-ids/]
+4. Ant Sherratt : "I live for the day that someone actually uses `progress` for this" - you're welcome mate.
 
 
 
