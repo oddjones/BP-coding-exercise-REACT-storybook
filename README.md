@@ -62,6 +62,10 @@ The standalone interface can be toggled by clicking the "open canvas in new tab"
 
 1. Learn more React! - this is my first serious React project - it has been a learning experience - there's plenty I'd do differently, given the chance to spend more time with the code.
 2. Configure the storybook stories more effectively - a few components are missing key dependencies (mainly due to my hoisting the code from them up to the main "process" component) - I will be rewriting the stories so as to make them work independently again.
+3. Accessibility/Usability fixes : there are a few gotchas that I'd round up in the next pass: 
+    3. Skip to content link - there currently isn't any nav to skip so it would be included along with the nav.
+    3. Some elements are rendered directly into the virtual DOM rather than being shown/hidden (the progress details for example) - this would cause havoc for assistive tech. I'd fix that.
+    3. Below 375px screen width render for older phones - I'd add another media query and do some fixing.
 3. Install and configure more add-ins to Storybook - a built in responsive viewer, code lifting and documentation as well as the infamous "knobs" addon which allows you to play with all the settings of a component in its standalone state.
 4. sort the processes by priority - or maybe offer a "drag and drop" facility to change priority by moving processes up and down the list
 5. Testing - Storybook implements the Jest testing framework by default - and addins can be implemented to set rendered results within the Storybook UI as "snapshot" tests for automation testing purposes.
