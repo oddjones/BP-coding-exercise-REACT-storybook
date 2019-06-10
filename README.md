@@ -61,7 +61,7 @@ The standalone interface can be toggled by clicking the "open canvas in new tab"
 ## How would I make it better?
 
 1. Learn more React! - this is my first serious React project - it has been a learning experience - there's plenty I'd do differently, given the chance to spend more time with the code.
-2. Configure the storybook stories more effectively - a few components are missing key dependencies (mainly due to my hoisting the code from them up to the main "process" component) - I will be rewriting the stories so as to make them work independently again.
+2. Configure the storybook stories more effectively - a few components are missing key dependencies (mainly due to my hoisting the code from them up to the main "processItem" component) - I will be rewriting the stories so as to make them work independently again.
 3. Accessibility/Usability fixes : there are a few gotchas that I'd round up in the next pass: 
     * Skip to content link - there currently isn't any nav to skip so it would be included along with the nav.
     * Some elements are rendered directly into the virtual DOM rather than being shown/hidden (the progress details for example) - this would cause havoc for assistive tech. I'd fix that.
